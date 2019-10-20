@@ -10,7 +10,7 @@ Now using Let's Encrypt for simple and free SSL certs!
 
 #### Prerequisites
 
-* [Go](https://golang.org/doc/install) (for development)
+* [Go](https://golang.org/doc/install)
 * [Docker](https://docs.docker.com/engine/installation/)
 * [Docker-Compose](https://docs.docker.com/compose/install/)
 * Make
