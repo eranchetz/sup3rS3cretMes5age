@@ -29,7 +29,7 @@ require (
 	github.com/mattn/go-isatty v0.0.8
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/mapstructure v1.1.2
-	github.com/opencontainers/go-digest v1.0.0-rc1
+	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.0.1
 	github.com/opencontainers/runc v0.1.1
 	github.com/pkg/errors v0.8.1
