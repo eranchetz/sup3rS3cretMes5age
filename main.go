@@ -10,7 +10,7 @@ func main() {
 
 	conf := getConfig()
 
-	handlers := NewSecretHandlers(newVault("", ""))
+	handlers := NewSecretHandlers(newVault("", conf.VaultPrefix, ""))
 	e := echo.New()
 
 	e.Pre(middleware.HTTPSRedirect())
