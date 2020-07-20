@@ -34,7 +34,7 @@ require (
 	github.com/opencontainers/runc v0.1.1
 	github.com/pkg/errors v0.8.1
 	github.com/sethgrid/pester v0.0.0-20171127025028-760f8913c048
-	github.com/sirupsen/logrus v1.4.2
+	github.com/sirupsen/logrus v1.6.0
 	github.com/valyala/bytebufferpool v1.0.0
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
