@@ -13,14 +13,6 @@ func main() {
 	handlers := NewSecretHandlers(newVault("", ""))
 	e := echo.New()
 
-	e.Pre(middleware.HTTPSRedirect())
-
-	//AutoTLS
-	e.AutoTLSManager.HostPolicy = autocert.HostWhitelist(conf.Domain)
-
-	// Cache certificates
-	e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
-
 	e.Use(middleware.Logger())
 	e.Use(middleware.BodyLimit("50M"))
 
@@ -34,13 +26,24 @@ func main() {
 	e.File("/getmsg", "static/getmsg.html")
 	e.Static("/static", "static")
 
-
-	go func(c *echo.Echo){
+	if conf.Domain == "" {
 		e.Logger.Fatal(e.Start(":80"))
-    }(e)	
-	if !conf.Local {
-		e.Logger.Fatal(e.StartAutoTLS(":443"))
 	} else {
-		e.Logger.Fatal(e.StartTLS(":443", "cert.pem", "key.pem"))
+		e.Pre(middleware.HTTPSRedirect())
+
+		//AutoTLS
+		e.AutoTLSManager.HostPolicy = autocert.HostWhitelist(conf.Domain)
+
+		// Cache certificates
+		e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
+
+		go func(c *echo.Echo){
+			e.Logger.Fatal(e.Start(":80"))
+		}(e)	
+		if !conf.Local {
+			e.Logger.Fatal(e.StartAutoTLS(":443"))
+		} else {
+			e.Logger.Fatal(e.StartTLS(":443", "cert.pem", "key.pem"))
+		}
 	}
 }
