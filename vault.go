@@ -13,14 +13,12 @@ type SecretMsgStorer interface {
 }
 
 type vault struct {
-	address string
 	prefix  string
-	token   string
 }
 
 // NewVault creates a vault client to talk with underline vault server
-func newVault(address string, prefix string, token string) vault {
-	return vault{address, prefix, token}
+func newVault(prefix string) vault {
+	return vault{prefix}
 }
 
 func (v vault) Store(msg string, ttl string) (token string, err error) {
@@ -76,19 +74,6 @@ func (v vault) createOneTimeToken(ttl string) (string, error) {
 
 func (v vault) newVaultClient() (*api.Client, error) {
 	c, err := api.NewClient(api.DefaultConfig())
-	if err != nil {
-		return nil, err
-	}
-
-	if v.token != "" {
-		c.SetToken(v.token)
-	}
-
-	if v.address == "" {
-		return c, nil
-	}
-
-	err = c.SetAddress(v.address)
 	if err != nil {
 		return nil, err
 	}
