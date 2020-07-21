@@ -17,9 +17,10 @@ services:
     image: algolia/supersecretmessage:latest
     container_name: supersecret
     environment:
-      VAULT_ADDR: http://vault:8200
-      VAULT_TOKEN: supersecret
       DOMAIN: "${DOMAIN}"
+      VAULT_ADDR: http://vault:8200
+      VAULT_PREFIX: cubbyhole/
+      VAULT_TOKEN: supersecret
     ports:
       - "80:80"
       - "443:443"

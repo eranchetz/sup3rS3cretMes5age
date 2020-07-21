@@ -10,7 +10,6 @@ func main() {
 
 	conf := getConfig()
 
-	handlers := NewSecretHandlers(newVault("", ""))
 	e := echo.New()
 
 	e.Pre(middleware.HTTPSRedirect())
@@ -26,6 +25,7 @@ func main() {
 
 	e.GET("/", redirect)
 	e.File("/robots.txt", "static/robots.txt")
+	handlers := NewSecretHandlers(newVault(conf.VaultPrefix))
 
 	e.Any("/health", HealthHandler)
 	e.GET("/secret", handlers.GetMsgHandler)

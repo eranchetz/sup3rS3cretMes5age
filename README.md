@@ -29,6 +29,13 @@ Try it! (you can ignore the safety warning since it's a self-signed cert)
 https://localhost
 ```
 
+#### Environment Variables
+
+* `VAULT_PREFIX`: Key prefix for Vault secrets
+* `VAULT_TOKEN`: Vault token
+* `VAULT_ADDR`: Vault address
+* `DOMAIN`: TLS domain for HTTPS server
+
 #### Running with Let's Encrypt
 
 
