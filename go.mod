@@ -25,8 +25,8 @@ require (
 	github.com/hashicorp/vault/api v1.0.5-0.20200117231345-460d63e36490
 	github.com/labstack/echo v3.2.6+incompatible
 	github.com/labstack/gommon v0.2.2-0.20170925052817-57409ada9da0
-	github.com/mattn/go-colorable v0.1.2
-	github.com/mattn/go-isatty v0.0.8
+	github.com/mattn/go-colorable v0.1.8
+	github.com/mattn/go-isatty v0.0.12
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/opencontainers/go-digest v1.0.0-rc1
@@ -39,7 +39,7 @@ require (
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
 	golang.org/x/net v0.0.0-20190813141303-74dc4d7220e7
-	golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+	golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae
 	golang.org/x/text v0.3.2
 	gopkg.in/ory-am/dockertest.v3 v3.3.4
 )
