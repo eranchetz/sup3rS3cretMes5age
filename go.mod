@@ -40,6 +40,6 @@ require (
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
 	golang.org/x/net v0.0.0-20190813141303-74dc4d7220e7
 	golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
-	golang.org/x/text v0.3.2
+	golang.org/x/text v0.3.5
 	gopkg.in/ory-am/dockertest.v3 v3.3.4
 )
