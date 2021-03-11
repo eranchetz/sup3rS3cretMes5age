@@ -34,12 +34,12 @@ require (
 	github.com/opencontainers/runc v0.1.1
 	github.com/pkg/errors v0.8.1
 	github.com/sethgrid/pester v0.0.0-20171127025028-760f8913c048
-	github.com/sirupsen/logrus v1.4.2
+	github.com/sirupsen/logrus v1.8.1
 	github.com/valyala/bytebufferpool v1.0.0
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
 	golang.org/x/net v0.0.0-20190813141303-74dc4d7220e7
-	golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037
 	golang.org/x/text v0.3.2
 	gopkg.in/ory-am/dockertest.v3 v3.3.4
 )
