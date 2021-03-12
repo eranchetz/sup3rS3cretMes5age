@@ -18,7 +18,7 @@ require (
 	github.com/golang/snappy v0.0.1
 	github.com/hashicorp/errwrap v1.0.0
 	github.com/hashicorp/go-cleanhttp v0.5.1
-	github.com/hashicorp/go-multierror v1.0.0
+	github.com/hashicorp/go-multierror v1.1.1
 	github.com/hashicorp/go-rootcerts v1.0.1
 	github.com/hashicorp/hcl v1.0.0
 	github.com/hashicorp/vault v1.3.2
