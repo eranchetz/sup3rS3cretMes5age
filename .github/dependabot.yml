@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: gomod
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: github.com/fsouza/go-dockerclient
+    versions:
+    - 1.7.0
+    - 1.7.1
+  - dependency-name: github.com/sirupsen/logrus
+    versions:
+    - 1.7.0
+    - 1.7.1
+    - 1.8.0
+  - dependency-name: golang.org/x/text
+    versions:
+    - 0.3.5
+  - dependency-name: github.com/hashicorp/go-multierror
+    versions:
+    - 1.1.0
